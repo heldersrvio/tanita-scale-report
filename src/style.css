@@ -1,0 +1,373 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color: #222;
+	background-color: #ede8dd;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+
+#app {
+	max-width: 1280px;
+	width: 100vw;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+img {
+	margin-bottom: 1.5rem;
+}
+
+img:hover {
+	filter: drop-shadow(0 0 2em #673ab8aa);
+}
+
+section {
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 1.5rem;
+}
+
+.resource {
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.5rem;
+	text-align: left;
+	text-decoration: none;
+	color: #222;
+	background-color: #f1f1f1;
+	border: 1px solid transparent;
+}
+
+.resource:hover {
+	border: 1px solid #000;
+	box-shadow: 0 25px 50px -12px #673ab888;
+}
+
+@media (max-width: 639px) {
+	#app {
+		margin: 2rem;
+	}
+	section {
+		margin-top: 5rem;
+		grid-template-columns: 1fr;
+		row-gap: 1rem;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color: #ccc;
+		background-color: #1a1a1a;
+	}
+	.resource {
+		color: #ccc;
+		background-color: #161616;
+	}
+	.resource:hover {
+		border: 1px solid #bbb;
+	}
+}
+
+#app > div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+}
+
+.report {
+	padding: 0.75rem 0;
+	width: 80%;
+	border-top: 5px solid #190b4b;
+	border-bottom: 5px solid #190b4b;
+}
+
+.report-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: left;
+}
+
+.report-column {
+	width: 35%;
+}
+
+.report-column > div strong {
+	width: 40px;
+	display: inline-block;
+	margin-right: 2rem;
+}
+
+.report-main {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
+}
+
+.report-main h2 {
+	font-size: 1.5rem;
+	text-align: left;
+}
+
+.report-main h3 {
+	font-size: 1rem;
+	color: #3a2d08;
+	margin: 0;
+}
+
+.report-main table {
+	font-size: 0.9rem;
+	width: 70%;
+}
+
+.report-main thead th {
+	padding: 0.7rem;
+}
+
+.report-main tbody td {
+	padding: 0.7rem;
+}
+
+.report-main table tbody tr :first-child {
+	width: 75%;
+	text-align: right;
+	padding-left: 5rem;
+	font-weight: bold;
+}
+
+.report-main table tbody td:not(:first-child) {
+	border-bottom: 1px solid #000;
+}
+
+#body-composition-table h2 {
+	color: #0b7710;
+}
+
+#body-composition-table thead {
+	background-color: #0b7710;
+	color: #fff;
+}
+
+#body-composition-table tbody tr :first-child {
+	background-color: #8ce090;
+	color: #04683e;
+}
+
+#fat-table h2 {
+	color: #0b4f77;
+}
+
+#fat-table thead {
+	background-color: #0b4f77;
+	color: #fff;
+}
+
+#fat-table tbody tr :first-child {
+	background-color: #6bc2b6;
+	color: #045468;
+}
+
+.report-chart {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.report-chart .chart-container {
+	height: 80%;
+	width: 100%;
+	position: relative;
+}
+
+.report-chart .chart {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	overflow: hidden;
+	border-radius: 5%;
+	height: 100%;
+}
+
+.chart-quadrant {
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem;
+}
+
+.chart .chart-quadrant:nth-child(1) {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.chart .chart-quadrant:nth-child(2) {
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+.chart .chart-quadrant:nth-child(3) {
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+.chart .chart-quadrant:nth-child(4) {
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+#muscle-mass-chart .chart-quadrant:nth-child(1) {
+	background-color: #8c92a3;
+}
+
+#muscle-mass-chart .chart-quadrant:nth-child(2) {
+	background-color: #49def1;
+}
+
+#muscle-mass-chart .chart-quadrant:nth-child(3) {
+	background-color: #417c2f;
+}
+
+#muscle-mass-chart .chart-quadrant:nth-child(4) {
+	background-color: #48e418;
+}
+
+#fat-chart .chart-quadrant:nth-child(1) {
+	background-color: #e2b949;
+}
+
+#fat-chart .chart-quadrant:nth-child(2) {
+	background-color: #b6912b;
+}
+
+#fat-chart .chart-quadrant:nth-child(3) {
+	background-color: #8d7228;
+}
+
+#fat-chart .chart-quadrant:nth-child(4) {
+	background-color: #99854e;
+}
+
+.human {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	height: 85%;
+}
+
+.human span {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+.human span.body-data-label {
+	top: 30%;
+	font-size: 0.7rem;
+}
+
+.human span.body-data {
+	top: 40%;
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+
+.human svg {
+	color: #fff;
+	height: 100%;
+}
+
+.hand-indication {
+	position: absolute;
+	right: -22px;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 15px;
+	line-height: 15px;
+	writing-mode: vertical-lr;
+	color: #505050;
+}
+
+.muscle-fat-control h2 {
+	color: #1970a1;
+	text-align: left;
+}
+
+.muscle-fat-control-table {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.muscle-fat-control-column, .muscle-fat-control-item {
+	display: flex;
+	flex-direction: row;
+}
+
+.muscle-fat-control-item > span {
+	text-align: center;
+}
+
+.muscle-fat-control-item {
+	width: 100%;
+}
+
+.muscle-fat-control-item span {
+	padding: 0.7rem;
+}
+
+.muscle-fat-control-item :first-child {
+	display: block;
+	text-align: right;
+	background-color: #ffa3d9;
+	color: #1970a1;
+	font-weight: bold;
+	width: 75%;
+}
+
+.muscle-fat-control-item :not(:first-child) {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.report-footer {
+	width: 80%;
+	margin-bottom: 3rem;
+	text-align: right;
+}
+
+.report-footer span {
+	text-transform: uppercase;
+	font-size: 0.9rem;
+}
+
+.report-footer strong {
+	text-transform: none;
+	font-style: italic;
+	font-size: 1rem;
+}
