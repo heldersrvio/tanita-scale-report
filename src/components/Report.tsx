@@ -20,6 +20,10 @@ const Report = (props) => {
                             <span><strong>Sexo:</strong></span>
                             <span class="data">{props.data.sex === 'M' ? 'Masculino' : 'Feminino'}</span>
                         </div>
+                        <div>
+                            <span><strong>Altura:</strong></span>
+                            <span class="data"></span>
+                        </div>
                     </div>
                 </div>
                 <div class="report-main">
@@ -30,28 +34,34 @@ const Report = (props) => {
                                 <tr>
                                     <th></th>
                                     <th>Valor</th>
+                                    <th>Faixa Normal</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Peso</td>
                                     <td>{props.data.weight} kg</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Percentual de Líquido</td>
                                     <td>{props.data.water_mass_pct}%</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Massa Magra</td>
                                     <td>{props.data.muscular_mass} kg</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Massa Óssea</td>
                                     <td>{props.data.bone_mass}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Taxa Metabólica</td>
                                     <td>{props.data.basal_metabolic_rate} kcal</td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -88,24 +98,29 @@ const Report = (props) => {
                                 <tr>
                                     <th></th>
                                     <th>Valor</th>
+                                    <th>Faixa Normal</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Índice de Massa Corporal</td>
                                     <td>{props.data.bmi}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Percentual de Gordura Corporal</td>
                                     <td>{props.data.body_fat_pct}%</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Massa de Gordura</td>
                                     <td>{props.data.fat_mass} kg</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Gordura Visceral</td>
                                     <td>{props.data.visceral_fat_rate} %</td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
