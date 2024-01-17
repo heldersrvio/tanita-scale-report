@@ -41,22 +41,22 @@ const Report = (props) => {
                                 <tr>
                                     <td>Peso</td>
                                     <td>{props.data.weight} kg</td>
-                                    <td></td>
+                                    <td>49.15 ~ 66.42 kg</td>
                                 </tr>
                                 <tr>
                                     <td>Percentual de Líquido</td>
                                     <td>{props.data.water_mass_pct}%</td>
-                                    <td></td>
+                                    <td>45 ~ 60%</td>
                                 </tr>
                                 <tr>
                                     <td>Massa Magra</td>
                                     <td>{props.data.muscular_mass} kg</td>
-                                    <td></td>
+                                    <td>25.70 ~ 27.36 kg</td>
                                 </tr>
                                 <tr>
                                     <td>Massa Óssea</td>
                                     <td>{props.data.bone_mass}</td>
-                                    <td></td>
+                                    <td>2.40 kg</td>
                                 </tr>
                                 <tr>
                                     <td>Taxa Metabólica</td>
@@ -105,17 +105,17 @@ const Report = (props) => {
                                 <tr>
                                     <td>Índice de Massa Corporal</td>
                                     <td>{props.data.bmi}</td>
-                                    <td></td>
+                                    <td>18.5 ~ 25</td>
                                 </tr>
                                 <tr>
                                     <td>Percentual de Gordura Corporal</td>
                                     <td>{props.data.body_fat_pct}%</td>
-                                    <td></td>
+                                    <td>20 ~ 32%</td>
                                 </tr>
                                 <tr>
                                     <td>Massa de Gordura</td>
                                     <td>{props.data.fat_mass} kg</td>
-                                    <td></td>
+                                    <td>16.58 ~ 26.53 kg</td>
                                 </tr>
                                 <tr>
                                     <td>Gordura Visceral</td>
