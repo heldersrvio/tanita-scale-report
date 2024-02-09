@@ -9,29 +9,8 @@ import './style.css';
 import { parseReport } from './api';
 
 export function App() {
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
-	const [file, setFile] = useState(null);
-	const [reportData, setReportData] = useState(null);
 
-	const getReportData = async () => {
-		const data = await parseReport(file);
-		console.log(data);
-		setReportData(data);
-	};
-
-	useEffect(() => {
-		if (file !== null) {
-			getReportData();
-		}
-	}, [file]);
-
-	return !isLoggedIn ? (
-		<LogIn setIsLoggedIn={setIsLoggedIn}/>
-	) : reportData === null ? (
-		<PdfUpload setFile={setFile} />
-	) : (
-		<Report data={reportData} />
-	);
+	return <Report />;
 }
 
 if (typeof window !== 'undefined') {

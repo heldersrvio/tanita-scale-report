@@ -106,11 +106,15 @@ section {
 	text-align: left;
 }
 
-.report-column {
+.report-header .report-column {
+	width: 45%;
+}
+
+.report-main .report-column {
 	width: 35%;
 }
 
-.report-column > div strong {
+.report-main .report-column > div strong {
 	width: 40px;
 	display: inline-block;
 	margin-right: 2rem;
@@ -118,7 +122,7 @@ section {
 
 .report-main {
 	display: grid;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 2fr 1fr 1fr;
 	grid-template-columns: 2fr 1fr;
 }
 
@@ -133,9 +137,31 @@ section {
 	margin: 0;
 }
 
+.report-table {
+	display: flex;
+	align-items: center;
+}
+
 .report-main table {
 	font-size: 0.9rem;
 	width: 95%;
+}
+
+.report-header table td {
+	border: 1px solid #000;
+}
+
+.report-header table {
+	font-size: 0.9rem;
+	width: 100%;
+}
+
+.report-header .datetime-column table .label {
+	width: 20%;
+}
+
+.report-header thead th, .report-header tbody td {
+	padding: 0.5rem;
 }
 
 .report-main thead th {
@@ -146,19 +172,23 @@ section {
 	padding: 0.7rem;
 }
 
-.report-main table tbody tr :first-child {
+.report-main table tbody tr :first-child, .report-main table tbody tr .label-cell {
 	width: 65%;
 	text-align: right;
-	padding-left: 5rem;
 	font-weight: bold;
 }
 
-.report-main table tbody td:not(:first-child) {
+.report-main table tbody td:not(:first-child), .report-main table tbody td:not(.label-cell) {
 	border-bottom: 1px solid #000;
 }
 
-#body-composition-table h2 {
+.report h2 {
 	color: #0b7710;
+	text-align: left;
+}
+
+.report-header .label {
+	background-color: #bdbdbd;
 }
 
 #body-composition-table thead {
@@ -166,7 +196,7 @@ section {
 	color: #fff;
 }
 
-#body-composition-table tbody tr :first-child {
+#body-composition-table tbody tr :first-child, .report-main table tbody tr .label-cell {
 	background-color: #8ce090;
 	color: #04683e;
 }
@@ -183,6 +213,20 @@ section {
 #fat-table tbody tr :first-child {
 	background-color: #6bc2b6;
 	color: #045468;
+}
+
+#muscle-fat-control-table h2 {
+	color: #85087e;
+}
+
+#muscle-fat-control-table thead {
+	background-color: #85087e;
+	color: #fff;
+}
+
+#muscle-fat-control-table tbody tr :first-child {
+	background-color: #f3a3f3;
+	color: #6b0468;
 }
 
 .report-chart {
@@ -249,6 +293,10 @@ section {
 	background-color: #48e418;
 }
 
+#fat-chart {
+	grid-row-end: span 2;
+}
+
 #fat-chart .chart-quadrant:nth-child(1) {
 	background-color: #e2b949;
 }
@@ -311,48 +359,6 @@ section {
 	line-height: 15px;
 	writing-mode: vertical-lr;
 	color: #505050;
-}
-
-.muscle-fat-control h2 {
-	color: #1970a1;
-	text-align: left;
-}
-
-.muscle-fat-control-table {
-	display: flex;
-	flex-direction: column;
-	width: 50%;
-}
-
-.muscle-fat-control-column, .muscle-fat-control-item {
-	display: flex;
-	flex-direction: row;
-}
-
-.muscle-fat-control-item > span {
-	text-align: center;
-}
-
-.muscle-fat-control-item {
-	width: 100%;
-}
-
-.muscle-fat-control-item span {
-	padding: 0.7rem;
-}
-
-.muscle-fat-control-item :first-child {
-	display: block;
-	text-align: right;
-	background-color: #ffa3d9;
-	color: #1970a1;
-	font-weight: bold;
-	width: 75%;
-}
-
-.muscle-fat-control-item :not(:first-child) {
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
 }
 
 .report-footer {
