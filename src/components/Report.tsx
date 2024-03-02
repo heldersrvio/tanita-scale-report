@@ -91,6 +91,19 @@ const Report = (_props) => {
                                     <td></td>
                                 </tr>
                                 <tr>
+                                    <td rowspan={2} colspan={1}>Músculo Esquelético</td>
+                                    <td colSpan={1} class="label-cell">Percentual (% do peso)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colSpan={1}>Índice (kg/m2)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td colSpan={2}>Avaliação Física</td>
                                     <td></td>
                                     <td></td>
