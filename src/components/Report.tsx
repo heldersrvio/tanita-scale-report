@@ -1,6 +1,9 @@
+import logo from '../assets/logo_gessiane.png';
+
 const Report = (_props) => {
     return (
         <div>
+            <img className="logo" alt="Gessiane Sérvio" src={logo} />
             <h1>Análise da Composição Corporal</h1>
 
             <div class="report">
