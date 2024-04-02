@@ -107,7 +107,11 @@ section {
 }
 
 .report-header .report-column {
-	width: 45%;
+	width: 63%;
+}
+
+.report-header .datetime-column {
+	width: 35%;
 }
 
 .report-main .report-column {
@@ -145,6 +149,11 @@ section {
 .report-main table {
 	font-size: 0.9rem;
 	width: 95%;
+	border-spacing: 4px 0;
+}
+
+.report-main table td {
+	background-color: #f2f1f1;
 }
 
 .report-header table td {
@@ -157,7 +166,7 @@ section {
 }
 
 .report-header .datetime-column table .label {
-	width: 20%;
+	width: 30%;
 }
 
 .report-header thead th, .report-header tbody td {
@@ -217,6 +226,7 @@ section {
 #fat-table tbody tr :first-child {
 	background-color: #6bc3b7;
 	color: #567c92;
+	width: 40%;
 }
 
 #muscle-fat-control-table h2 {
@@ -231,6 +241,7 @@ section {
 #muscle-fat-control-table tbody tr :first-child {
 	background-color: #f7b6cc;
 	color: #c64466;
+	width: 40%;
 }
 
 .report-chart {

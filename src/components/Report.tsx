@@ -92,7 +92,7 @@ const Report = (_props) => {
                                 </tr>
                                 <tr>
                                     <td rowspan={2} colspan={1}>Músculo Esquelético</td>
-                                    <td colSpan={1} class="label-cell">Percentual (% do peso)</td>
+                                    <td colSpan={1} class="label-cell">% do peso</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -123,16 +123,16 @@ const Report = (_props) => {
                         <div class="chart-container">
                             <div class="chart">
                                 <div class="chart-quadrant">
-                                    <span></span>
+                                    <span>%</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span></span>
+                                    <span>%</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span></span>
+                                    <span>%</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span></span>
+                                    <span>%</span>
                                 </div>
                             </div>
                             <div class="human">
@@ -147,19 +147,19 @@ const Report = (_props) => {
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Água Corporal</th>
+                                    <th colspan={2}>Água Corporal</th>
                                     <th>Resultado</th>
                                     <th>Ideal</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Percentual (%)</td>
+                                    <td colspan={2}>Percentual (%)</td>
                                     <td></td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>Peso (kg)</td>
+                                    <td colspan={2}>Peso (kg)</td>
                                     <td></td>
                                     <td></td>
                                 </tr>
@@ -171,16 +171,16 @@ const Report = (_props) => {
                         <div class="chart-container">
                             <div class="chart">
                                 <div class="chart-quadrant">
-                                    <span></span>
+                                    <span>%</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span></span>
+                                    <span>%</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span></span>
+                                    <span>%</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span></span>
+                                    <span>%</span>
                                 </div>
                             </div>
                             <div class="human">
@@ -195,19 +195,24 @@ const Report = (_props) => {
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Condição Atual</th>
+                                    <th colspan={2}>Condição Atual</th>
                                     <th>Resultado</th>
                                     <th>Classificação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Taxa Metabólica Basal</td>
+                                    <td colspan={2}>Taxa Metabólica Basal (kcal)</td>
                                     <td></td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>Ingestão Calórica Diária</td>
+                                    <td colspan={2}>Ingestão Calórica Diária (kcal)</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan={2}>Idade Metabólica (anos)</td>
                                     <td></td>
                                     <td></td>
                                 </tr>
