@@ -167,20 +167,20 @@ const Report = (_props) => {
                         </table>
                     </div>
                     <div class="report-chart" id="fat-chart">
-                        <h3>Percentual de Massa Muscular Segmentada</h3>
+                        <h3>Massa Muscular Segmentada</h3>
                         <div class="chart-container">
                             <div class="chart">
                                 <div class="chart-quadrant">
-                                    <span>%</span>
+                                    <span>kg</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span>%</span>
+                                    <span>kg</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span>%</span>
+                                    <span>kg</span>
                                 </div>
                                 <div class="chart-quadrant">
-                                    <span>%</span>
+                                    <span>kg</span>
                                 </div>
                             </div>
                             <div class="human">
